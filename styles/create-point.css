@@ -1,0 +1,134 @@
+#page-create-point{
+    width: 90%;
+    max-width: 1100px;
+
+    /*Alinhamento de caixa (pelo lado de fora) */
+    margin: 0 auto;
+}
+
+#page-create-point header{
+    margin-top: 48px;
+    display: flex;
+    justify-content: space-between;/*cola um espação entre os itens*/
+    align-items: center; /*alinha no eixo Y*/ 
+}
+
+#page-create-point header a{
+    color: var(--title-color);
+    font-weight: bold;
+
+    display: flex;
+    
+}
+
+#page-create-point header a span{
+    margin-right: 16px;
+    background-image: url('../assets/arrow-left.svg');
+
+    /*seta altura e largura para o span */
+    width: 20px;
+    height: 24px;
+
+    display: flex; /*faz o span aparecer*/
+}
+
+form{
+    background-color: white;
+
+    /*Preenchimento interno*/
+    padding: 64px;
+    border-radius: 8px;
+
+    /*80px p/ cima e baixo, automático para os lados centralizando o form*/
+    margin: 80px auto;
+
+    max-width: 730px;
+
+}
+
+form h1 {
+    font-size: 26px;
+}
+
+form fieldset {
+    margin-top: 64px;
+    /*Desabilita bordas*/
+    border: 0;
+}
+
+form legend {
+    margin-bottom: 40px;
+}
+
+form legend h2 {
+    font-size: 24px;
+}
+
+form .field {
+    /*Faz os conteudos ocuparem todo espaço*/
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 24px;
+}
+
+form .field-group{
+    display: flex;
+}
+
+form input, 
+form select{
+    background-color: #f0f0f5;
+
+    border: 0;
+    padding: 16px 24px;
+    font-size: 16px;
+
+    border-radius: 8px;
+
+    /*Tira linha preta do redor do campo quando o mesmo é selecionado*/
+    outline: none;
+}
+
+form select {
+    /*Retira configurações dos browsers para o campo tipo select*/
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+form label {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+/*Aplica no .field que vier seguido de outro .field, ou seja o segundo,
+então já que o primeiro não tem um .fiel antes dele não se aplica o efeito*/
+form .field-group .field + .field{
+    margin-left: 24px;
+}
+
+form button{
+    width: 260px;
+    height: 56px;
+
+    background-color: var(--primary-color);
+    border-radius: 8px;
+
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+
+    border: 0;
+
+    margin-top: 40px;
+
+    
+    transition: backgroud-color 400ms;
+}
+
+form button:hover{
+    background-color: #2fb86e;
+}
