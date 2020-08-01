@@ -10,6 +10,9 @@ html{
 *{
     margin: 0;
     padding: 0;
+    /*Torna border-box padrão para todos elementos,
+    essa propriedade seta a margem como limite de espaço*/
+    box-sizing: border-box;
 }
 
 /*BOX MODEL
