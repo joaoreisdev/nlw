@@ -11,7 +11,7 @@
 
     #page-home header a{
         position: absolute;
-        bottom: 15px;
+        top: 130px;
 
         left: 50%;
         transform: translate(-50%);
@@ -21,6 +21,13 @@
         align-items: center;
     }
 
+    #page-search-results .cards{
+        grid-template-columns: 1fr;
+    }
+
+    #page-search-results .cards img{
+        height: 200px;
+    }
 }
 
 @media(min-width: 1700px){ /*Largura minima de 1700px, de 1700 para cima*/

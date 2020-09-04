@@ -1,0 +1,93 @@
+#modal{
+    background-color: #0E0A14ef;
+    height: 100vh;
+    width: 100vw;
+
+    position: fixed;
+    top: 0;
+
+    display: flex;
+    justify-content:center;
+    align-items: center;
+
+    transition: 400ms;
+}
+
+#modal.hide{
+    display: none;
+}
+
+#modal .content{
+    color: white;
+
+    width: 420px;
+}
+
+#modal .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 48px;
+}
+
+#modal .header a{
+    background-image: url(../assets/x.svg);
+
+    width: 20px;
+    height: 20px;
+
+    display: flex;
+    /*Deixando a fonte da tag minúscula para ela sumir,mantemos o texto para proporcionar a acessibilidade através dos leitores*/
+    font-size:0.00000001px ;
+}
+
+#modal .header h1{
+    color: white;
+
+    font-size:36px;
+    line-height: 42px;
+
+
+}
+
+#modal form label{
+    font-size: 14px;
+    line-height: 16px;
+
+    display: block; /*Mudando display da label para block para podermos utilizar o margin-bottom, display inline no suportando*/
+    margin-bottom: 8px;
+}
+
+#modal form .field{
+    display: flex;
+}
+
+#modal form input{
+    flex: 1;
+
+    background-color: #f0f0f5;
+
+    border-radius: 6px 0px 0px 6px;
+    border:0;
+
+    padding: 16px 24px;
+
+    font-size: 16px;
+    color: #6c6c80;
+}
+
+#modal form button{
+    width: 72px;
+    height: 72px;
+
+    background-color: var(--primary-color);
+    
+    border: 0;
+    border-radius: 0px 6px 6px 0px;
+}
+
+#modal form button:hover{
+    background-color: #2fb85e;
+    cursor: pointer;
+    transition: 400ms;
+}

@@ -49,6 +49,7 @@ document
     .querySelector("select[name=uf]")
     .addEventListener("change", getCities)
 
+
 //Itens de coleta
 //Pegar todos os li's
 const itemsToCollect = document.querySelectorAll(".items-grid li")
@@ -58,7 +59,8 @@ for(const item of itemsToCollect){
 }
 
 //
-let selectedItems = [2,3,5]
+let selectedItems = []
+const collectedItems = document.querySelector("input[name=items]")
 
 function handSelectedItem(event){
     
@@ -72,12 +74,26 @@ function handSelectedItem(event){
     const alreadySelected = selectedItems.findIndex(function(item) {
         return item == itemId 
     })
-    console.log(alreadySelected != -1)
-    //Se já estiver selecionado, tirar da seleção
     
+    //Se já estiver selecionado, tirar da seleção
+    if(alreadySelected != -1){
+        //Cria um array que filtra o item selecionado caso ele já esteja selecionado, armazenado no selectedItems
+        const filteredItems = selectedItems.filter(item =>{
+            const itemIsDifferent = item != itemId
+            return itemIsDifferent
+        })
+        //Atualiza o array selectedItems com o novo array filteredItems
+        selectedItems = filteredItems
+        //console.log(selectedItems)
+    }else{
     //Se não estive selecionado adicionar a seleção
+    //caso não esteja selecionado a função .push() adiciona o itemId no array de itens selecionados selectedItems
+        selectedItems.push(itemId)
+        //console.log(selectedItems)
+    }
+    
 
     //Atualizar o campo escondido com os itens selecionados <input type="hidden" name="items">
-
+    collectedItems.value = selectedItems
     
 }
